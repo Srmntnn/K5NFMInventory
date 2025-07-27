@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+  html {
+    transition-property: background-color, color;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+  }
+} */
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --popover: #ffffff;
+    --popover-foreground: #1a1a1a;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #e6e6e6;
+    --secondary-foreground: #000000;
+    --muted: #f2f2f2;
+    --muted-foreground: #666666;
+    --accent: #e6e6e6;
+    --accent-foreground: #262626;
+    --destructive: #ff3333;
+    --success: #22c55e;
+    --destructive-foreground: #ffffff;
+    --border: #c8cfda;
+    --input: #ffffff;
+    --ring: #3b82f6;
+    --radius: 0.5rem;
+    --gradient-text: linear-gradient(to right, #3b82f6, #ff3333);
+    --gradient-bg: linear-gradient(to bottom, #3b82f6, #ff3333);
+    --gradient: linear-gradient(to top left, #fc354c, #0abfbc);
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --background: #0e0f11;
+    --foreground: #ffffff;
+    --card: #0c0d0e;
+    --card-foreground: #e6e6e6;
+    --popover: #0d0d0d;
+    --popover-foreground: #e6e6e6;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #1a1a1a;
+    --secondary-foreground: #ffffff;
+    --muted: #262626;
+    --muted-foreground: #999999;
+    --accent: #262626;
+    --accent-foreground: #e6e6e6;
+    --destructive: #991f1f;
+    --success: #22c55e;
+    --destructive-foreground: #e6e6e6;
+    --border: #252c37;
+    --input: #17191c;
+    --ring: #3b82f6;
+    --radius: 0.5rem;
+    --gradient-text: linear-gradient(to right, #3b82f6, #ff3333);
+    --gradient-bg: linear-gradient(to bottom, #3b82f6, #ff3333);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+input[type="email"]:focus ~ .input-email,
+input[type="email"]:not(:placeholder-shown) ~ .input-email {
+  @apply text-blue-500 transform -translate-y-[16px] -translate-x-2 scale-75;
+}
+
+input[type="password"]:focus ~ .input-password,
+input[type="password"]:not(:placeholder-shown) ~ .input-password {
+  @apply text-blue-500 transform -translate-y-[16px] -translate-x-[9px] scale-75;
+}
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply text-blue-500 transform -translate-y-[16px] -translate-x-[9px] scale-75;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
